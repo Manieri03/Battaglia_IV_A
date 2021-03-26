@@ -9,7 +9,10 @@ namespace LibreriaGioco
         private const uint Attacco = 70;
         private const uint Difesa = 70;
 
-        public Troll(Schieramento s) : base(s) { }
+        public Troll() : base()
+        {
+            schieramento = Schieramento.Male;
+        }
 
         public override uint GetAttacco()
         {

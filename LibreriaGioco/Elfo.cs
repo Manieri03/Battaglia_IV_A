@@ -9,7 +9,10 @@ namespace LibreriaGioco
         private const uint Attacco = 60;
         private const uint Difesa = 40;
 
-        public Elfo(Schieramento s) : base(s) { }
+        public Elfo() : base()
+        {
+            schieramento = Schieramento.Bene;
+        }
 
         public override uint GetAttacco()
         {

@@ -9,7 +9,10 @@ namespace LibreriaGioco
         private const uint Attacco = 55;
         private const uint Difesa = 50;
 
-        public Orco(Schieramento s) : base(s) { }
+        public Orco() : base()
+        {
+            schieramento = Schieramento.Male;
+        }
 
         public override uint GetAttacco()
         {

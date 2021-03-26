@@ -9,7 +9,10 @@ namespace LibreriaGioco
         private const uint Attacco = 60;
         private const uint Difesa = 30;
 
-        public Stregone(Schieramento s) : base(s) { }
+        public Stregone() : base()
+        {
+            schieramento = Schieramento.Male;
+        }
 
         public override uint GetAttacco()
         {

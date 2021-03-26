@@ -13,15 +13,15 @@ namespace TestApp
         {
             try
             {
-                //Personaggio p1 = new Personaggio("Alessio", );
-                //Personaggio p2 = new Personaggio("Mostro", );
+                Personaggio p1 = new Personaggio("Alessio",);
+                Personaggio p2 = new Personaggio("Mostro", );
 
-                //Console.WriteLine($"Il personaggio n.1 è {p1} sta attaccando il personaggio n.2 {p2}");
+                Console.WriteLine($"Il personaggio n.1 è {p1} sta attaccando il personaggio n.2 {p2}");
 
-                //Console.WriteLine($"{p1.Attacca(p2)}");
+                Console.WriteLine($"{p1.Attacca(p2)}");
 
-                //Console.WriteLine(p1);
-                //Console.WriteLine(p2);
+                Console.WriteLine(p1);
+                Console.WriteLine(p2);
             }
             catch (Exception ex)
             {

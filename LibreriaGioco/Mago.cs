@@ -9,7 +9,10 @@ namespace LibreriaGioco
         private const uint Attacco = 90;
         private const uint Difesa = 35;
 
-        public Mago(Schieramento s) : base(s) { }
+        public Mago() : base()
+        {
+            schieramento = Schieramento.Bene;
+        }
 
         public override uint GetAttacco()
         {
