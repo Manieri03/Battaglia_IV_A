@@ -12,7 +12,7 @@ namespace LibreriaGioco
         }
         public uint Getdifesa(Personaggio p1, Personaggio p2)
         {
-            //
+            // 
         }
     }
 }
