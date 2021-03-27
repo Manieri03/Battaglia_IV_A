@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibreriaGioco", "LibreriaGi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{563D7B05-19FB-47BE-8B6A-A2013964C526}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacciaGrafica", "InterfacciaGrafica\InterfacciaGrafica.csproj", "{4C36BD61-66CB-4F0F-ACAE-9CF5FBF35E56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{563D7B05-19FB-47BE-8B6A-A2013964C526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{563D7B05-19FB-47BE-8B6A-A2013964C526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{563D7B05-19FB-47BE-8B6A-A2013964C526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C36BD61-66CB-4F0F-ACAE-9CF5FBF35E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C36BD61-66CB-4F0F-ACAE-9CF5FBF35E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C36BD61-66CB-4F0F-ACAE-9CF5FBF35E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C36BD61-66CB-4F0F-ACAE-9CF5FBF35E56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

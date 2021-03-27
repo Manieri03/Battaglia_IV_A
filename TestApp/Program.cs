@@ -13,15 +13,19 @@ namespace TestApp
         {
             try
             {
-                Personaggio p1 = new Personaggio("Alessio",);
-                Personaggio p2 = new Personaggio("Mostro", );
+                Uomo u1 = new Uomo();
+                Troll t1 = new Troll();
+                Personaggio p1 = new Personaggio("Alessio", u1 );
+                Personaggio p2 = new Personaggio("Mostro", t1);
 
-                Console.WriteLine($"Il personaggio n.1 è {p1} sta attaccando il personaggio n.2 {p2}");
+                Console.WriteLine($"Il personaggio n.1 è {p1.Nome} e sta attaccando il personaggio n.2 {p2.Nome}");
 
                 Console.WriteLine($"{p1.Attacca(p2)}");
 
-                Console.WriteLine(p1);
-                Console.WriteLine(p2);
+                Console.WriteLine("La battaglia si è conclusa, ecco il resoconto dei personaggi:");
+
+                Console.WriteLine(p1.ToString());
+                Console.WriteLine(p2.ToString());
             }
             catch (Exception ex)
             {

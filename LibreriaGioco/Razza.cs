@@ -12,5 +12,6 @@ namespace LibreriaGioco
         public abstract uint GetDifesa();
         public abstract bool PuoiAttaccare(Razza r);
 
+
     }
 }

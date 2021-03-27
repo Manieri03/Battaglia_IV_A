@@ -1,0 +1,60 @@
+﻿<Window x:Class="InterfacciaGrafica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterfacciaGrafica"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid Background="LightSlateGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Rectangle Width="800" Height="2" Fill="#FF080E4E"></Rectangle>
+            <Label HorizontalAlignment="Center"  Content="La Battaglia della IV A" FontWeight="Bold" FontFamily="Rockwell Nova Cond Light" FontSize="22" Foreground="#FF080E4E"  ></Label>
+            <Rectangle Width="800" Height="2" Fill="#FF080E4E"></Rectangle>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="3">
+            <Label Content="Definisci il tuo attaccante" HorizontalAlignment="Right" Padding="0,15,120,10" FontFamily="Rockwell Nova" Foreground="#FF080E4E"></Label>
+            <Label Content="Razza:" Foreground="#FF080E4E" FontFamily="Rockwell Nova" HorizontalAlignment="Center"></Label>
+            <ComboBox x:Name="cmbRazzaAtt" Width="200" HorizontalAlignment="Center" Loaded="CmbRazzaAtt_Loaded"></ComboBox>
+            <Label Content="Nome:" Foreground="#FF080E4E" FontFamily="Rockwell Nova" HorizontalAlignment="Center"></Label>
+            <TextBox x:Name="txtNomeAtt" Width="200" Height="20"></TextBox>
+        </StackPanel>
+        <Button x:Name="btnCreaAtt" Grid.Column="0" Grid.Row="4" Content="Crea Personaggio" Width="150" Height="25" Foreground="#FF080E4E" FontFamily="Rockwell Nova" Click="BtnCreaAtt_Click"></Button>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="3">
+            <Label Content="Definisci il tuo difensore" HorizontalAlignment="left" Padding="120,15,0,10" FontFamily="Rockwell Nova" Foreground="#FF080E4E"></Label>
+            <Label Content="Razza:" Foreground="#FF080E4E" FontFamily="Rockwell Nova" HorizontalAlignment="Center"></Label>
+            <ComboBox x:Name="cmbRazzaDif" Width="200" HorizontalAlignment="Center" Loaded="CmbRazzaDif_Loaded"></ComboBox>
+            <Label Content="Nome:" Foreground="#FF080E4E" FontFamily="Rockwell Nova" HorizontalAlignment="Center"></Label>
+            <TextBox x:Name="txtNomeDif" Width="200" Height="20"></TextBox>
+        </StackPanel>
+        <Button x:Name="btnCreaDif" Grid.Column="1" Grid.Row="4" Content="Crea Personaggio" Width="150" Height="25" Foreground="#FF080E4E" FontFamily="Rockwell Nova" Click="BtnCreaDif_Click"></Button>
+
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image Width="50" Source="https://static.vecteezy.com/system/resources/thumbnails/001/194/324/small_2x/cross-sword.png" ></Image>
+            <Rectangle Width="20"></Rectangle>
+            <Button Content="Combatti" Height="50" Width="120" Foreground="#FF080E4E" FontFamily="Rockwell Nova" FontSize="18" Click="Button_Click"></Button>
+            <Rectangle Width="20"></Rectangle>
+            <Image Width="50" Source="https://static.vecteezy.com/system/resources/thumbnails/001/194/324/small_2x/cross-sword.png"></Image>
+        </StackPanel>
+
+        <Label x:Name="lblOutput" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Foreground="#FF080E4E" FontFamily="Rockwell Nova" Width="500" Height="70" FontSize="10" ></Label>
+    </Grid>
+</Window>

@@ -6,7 +6,7 @@ namespace LibreriaGioco
 {
     public class Personaggio
     {
-        private uint Vita;
+        public uint Vita;
         private Razza razza;
         public uint Exp;
         public string Nome { get; private set; }
@@ -20,6 +20,8 @@ namespace LibreriaGioco
         {
             Nome = nome;
             this.razza = razza;
+            Vita = 100;
+            Exp = 1;
             
         }
         public Razza GetRazza()
@@ -38,9 +40,14 @@ namespace LibreriaGioco
         {
             return GetRazza().GetDifesa() * GetExp();
         }
+
+        public override string ToString()
+        {
+            return ($"{Nome} [Razza:{razza.GetType().Name}]\n Vita : {Vita}\n Esperienza : {Exp}\n Attacco : {razza.GetAttacco()}\n Difesa : {razza.GetDifesa()}\n");
+        }
         public bool Attacca(Personaggio p1)
         {
-            if (razza.schieramento == p1.razza.schieramento)
+            if (razza.schieramento == p1.razza.schieramento) // tentativo con metodo "PuoiAttaccare" fallito
             {
                 throw new Exception("Il personaggio che vuoi attaccare è della tua stessa squadra!");
             }
@@ -49,16 +56,7 @@ namespace LibreriaGioco
                 uint difesa = p1.Difesa;
                 uint attacco = GetAttacco();
 
-                if (attacco-difesa < 0) //attacco non andato a buon fine
-                {
-                    if (Exp < 10)
-                    {
-                        Exp++;
-                    }
-                    return false;
-                   
-                }
-                else //attacco andato a buon fine
+                if (attacco>difesa)
                 {
                     if (p1.Vita > 0)
                     {
@@ -69,6 +67,16 @@ namespace LibreriaGioco
                         Exp++;
                     }
                     return true;
+
+                }
+                else
+                {
+                    
+                    if (p1.Exp < 10)
+                    {
+                        p1.Exp++;
+                    }
+                    return false;
                 }               
             }
         }
